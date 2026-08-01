@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
-<title>待填写培训档案</title>
+<title>待确认培训档案</title>
 <style>
 :root {
   --bg:#f5f5f7; --card:rgba(255,255,255,0.85); --text:#1d1d1f; --text2:#86868b;
@@ -21,7 +21,7 @@ body{
 /* ====== HERO ====== */
 .hero{
   text-align:center;padding:48px 20px 36px;
-  background:linear-gradient(180deg,#fff 0%,var(--bg) 待填写);
+  background:linear-gradient(180deg,#fff 0%,var(--bg) 100%);
   position:relative;overflow:hidden;
 }
 .hero::before,.hero::after{
@@ -39,7 +39,7 @@ body{
 }
 .hero h1{
   font-size:28px;font-weight:700;letter-spacing:-0.5px;margin-bottom:6px;
-  background:linear-gradient(135deg,#1d1d1f 0%,#434344 待填写);
+  background:linear-gradient(135deg,#1d1d1f 0%,#434344 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   position:relative;z-index:1;white-space:nowrap;
   animation:fadeInDown 0.8s ease;
@@ -95,7 +95,7 @@ body{
 .table-wrap::-webkit-scrollbar-track{background:transparent}
 .table-wrap::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.05);border-radius:1px}
 .table-wrap::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,0.08)}
-.data-table{width:待填写;border-collapse:collapse;font-size:12px;min-width:480px}
+.data-table{width:100%;border-collapse:collapse;font-size:12px;min-width:480px}
 .data-table th{
   text-align:left;padding:8px 6px;font-weight:600;font-size:10px;color:var(--text2);
   text-transform:uppercase;letter-spacing:0.5px;border-bottom:1px solid rgba(0,0,0,0.06);
@@ -122,7 +122,7 @@ body{
 .progress-label{font-size:11px;color:var(--text2);white-space:nowrap;flex-shrink:0}
 .progress-val{font-size:11px;font-weight:600;white-space:nowrap;flex-shrink:0}
 .progress-bar{flex:1;height:6px;background:rgba(0,0,0,0.06);border-radius:3px;overflow:hidden}
-.progress-fill{height:待填写;border-radius:3px;background:linear-gradient(90deg,var(--accent),#42a5f5);transition:width 1s ease}
+.progress-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent),#42a5f5);transition:width 1s ease}
 .progress-fill.green{background:linear-gradient(90deg,var(--accent2),#30d158)}
 
 /* ====== COMMENT BOX ====== */
@@ -140,8 +140,8 @@ body{
 .photo-section{
   display:flex;gap:12px;flex-wrap:nowrap;
   flex:1;min-width:0;padding:4px 0;
-  mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 待填写);
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 待填写);
+  mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%);
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%);
   transition:mask-image 0.4s,-webkit-mask-image 0.4s;
 }
 /* Animate the track: move half width then reset seamlessly */
@@ -152,7 +152,7 @@ body{
 .photo-track.paused{animation-play-state:paused}
 @keyframes photoScroll{
   0%{transform:translateX(0)}
-  待填写{transform:translateX(-50%)}
+  100%{transform:translateX(-50%)}
 }
 .photo-section.expanded{
   flex-wrap:wrap;overflow:visible;
@@ -161,7 +161,7 @@ body{
 }
 .photo-section.expanded .photo-track{
   animation:none;flex-wrap:wrap;justify-content:center;gap:12px;
-  width:待填写;
+  width:100%;
 }
 .photo-card{
   flex:0 0 calc((100vw - 36px) / 3);min-width:120px;max-width:280px;
@@ -172,11 +172,11 @@ body{
 /* Expanded: use width instead of flex-basis for reliable grid layout */
 .photo-section.expanded .photo-card{
   flex:0 0 auto;
-  width:calc((待填写 - 60px) / 6);min-width:100px;max-width:180px;
+  width:calc((100% - 60px) / 6);min-width:100px;max-width:180px;
   animation:none;
 }
 .photo-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
-.photo-card img{width:待填写;height:130px;object-fit:cover;display:block;transition:height 0.45s ease}
+.photo-card img{width:100%;height:130px;object-fit:cover;display:block;transition:height 0.45s ease}
 .photo-section.expanded .photo-card img{height:100px}
 .photo-caption{
   padding:8px 10px;background:var(--card);font-size:11px;font-weight:500;
@@ -219,9 +219,9 @@ body{
 /* ====== KEYFRAMES ====== */
 @keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes pulse{0%,待填写{transform:scale(1)}50%{transform:scale(1.04)}}
-@keyframes badgeGlow{0%,待填写{box-shadow:0 4px 12px rgba(0,113,227,0.3)}50%{box-shadow:0 4px 24px rgba(0,113,227,0.5)}}
-@keyframes floatBubble{0%,待填写{transform:translate(0,0) scale(1)}33%{transform:translate(20px,-15px) scale(1.08)}66%{transform:translate(-15px,8px) scale(0.95)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+@keyframes badgeGlow{0%,100%{box-shadow:0 4px 12px rgba(0,113,227,0.3)}50%{box-shadow:0 4px 24px rgba(0,113,227,0.5)}}
+@keyframes floatBubble{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(20px,-15px) scale(1.08)}66%{transform:translate(-15px,8px) scale(0.95)}}
 @keyframes scaleIn{from{opacity:0;transform:scale(0.95)}to{opacity:1;transform:scale(1)}}
 
 /* ====== STAGGER ====== */
@@ -268,7 +268,7 @@ body{
   .table-wrap{margin:0;padding:0}
   .photo-section{gap:16px}
   .photo-card{flex:0 0 calc((100vw - 32px) / 3);max-width:240px}
-  .photo-section.expanded .photo-card{width:calc((待填写 - 80px) / 6);max-width:140px}
+  .photo-section.expanded .photo-card{width:calc((100% - 80px) / 6);max-width:140px}
   .photo-card img{height:180px}
   .photo-section.expanded .photo-card img{height:110px}
   .photo-caption{font-size:13px;padding:12px 16px}
@@ -302,7 +302,7 @@ body{
   .tag{font-size:12px;padding:3px 12px}
   .photo-section{gap:20px}
   .photo-card{flex:0 0 calc((100vw - 40px) / 3);max-width:280px}
-  .photo-section.expanded .photo-card{width:calc((待填写 - 100px) / 6);max-width:160px}
+  .photo-section.expanded .photo-card{width:calc((100% - 100px) / 6);max-width:160px}
   .photo-card img{height:240px}
   .photo-section.expanded .photo-card img{height:130px}
   .photo-caption{font-size:14px;padding:14px 20px}
@@ -322,7 +322,7 @@ body{
   .card{padding:40px}
   .photo-section{gap:24px}
   .photo-card{flex:0 0 calc((100vw - 48px) / 3);max-width:320px}
-  .photo-section.expanded .photo-card{width:calc((待填写 - 120px) / 6);max-width:180px}
+  .photo-section.expanded .photo-card{width:calc((100% - 120px) / 6);max-width:180px}
   .photo-card img{height:280px}
   .photo-section.expanded .photo-card img{height:150px}
 }
@@ -358,9 +358,9 @@ body{
 <body>
 
 <div class="hero">
-  <h1>待填写培训档案</h1>
-  <p class="subtitle">待填写</p>
-  <div class="badge">⭐ 种子学员推荐</div>
+  <h1>待确认培训档案</h1>
+  <p class="subtitle">待确认</p>
+  <div class="badge">待确认</div>
 </div>
 
 <!-- 基本信息 -->
@@ -371,12 +371,12 @@ body{
   </div>
   <div class="card">
     <div class="stat-row">
-      <div class="stat-item"><div class="stat-val">待填写</div><div class="stat-lbl">姓名</div></div>
-      <div class="stat-item"><div class="stat-val">待填写</div><div class="stat-lbl">经销商</div></div>
-      <div class="stat-item"><div class="stat-val">待填写</div><div class="stat-lbl">岗位</div></div>
+      <div class="stat-item"><div class="stat-val">待确认</div><div class="stat-lbl">姓名</div></div>
+      <div class="stat-item"><div class="stat-val">待确认</div><div class="stat-lbl">经销商</div></div>
+      <div class="stat-item"><div class="stat-val">待确认</div><div class="stat-lbl">岗位</div></div>
     </div>
     <div class="stat-row" style="margin-top:1px">
-      <div class="stat-item"><div class="stat-val gold">待填写</div><div class="stat-lbl">出勤率</div></div>
+      <div class="stat-item"><div class="stat-val gold">待确认</div><div class="stat-lbl">出勤率</div></div>
       <div class="stat-item"><div class="stat-val">--</div><div class="stat-lbl">作业均分</div></div>
       <div class="stat-item"><div class="stat-val green">--</div><div class="stat-lbl">考试总分</div></div>
     </div>
@@ -387,7 +387,7 @@ body{
 <div class="section">
   <div class="section-header">
     <h2 class="section-title">每日签到</h2>
-    <p class="section-desc">待填写</p>
+    <p class="section-desc">待确认</p>
   </div>
   <div class="card">
     <div class="card-header">
@@ -420,7 +420,7 @@ body{
 <div class="section">
   <div class="section-header">
     <h2 class="section-title">作业记录</h2>
-    <p class="section-desc">待填写</p>
+    <p class="section-desc">待确认</p>
   </div>
   <div class="card">
     <div class="card-header">
@@ -431,10 +431,10 @@ body{
     <table class="data-table">
       <thead><tr><th>日期</th><th>作业内容</th><th>质量</th><th>评分</th><th>评语</th></tr></thead>
       <tbody>
-        <tr><td>03/02</td><td>基础建模：转角柜体</td><td><span class="tag excellent">待评定</span></td><td>100</td><td>基础操作已熟悉</td></tr>
-        <tr><td>03/02</td><td>基础建模：切角柜体</td><td><span class="tag excellent">待评定</span></td><td>100</td><td>基础操作已熟悉</td></tr>
-        <tr><td>03/03</td><td>基础建模：厨房电器柜</td><td><span class="tag excellent">待评定</span></td><td>90</td><td>建模步骤已熟悉</td></tr>
-        <tr><td>03/04</td><td>基础建模：柜门</td><td><span class="tag excellent">待评定</span></td><td>90</td><td>快捷调整已掌握</td></tr>
+        <tr><td>03/02</td><td>基础建模：转角柜体</td><td><span class="tag excellent">优秀</span></td><td>100</td><td>基础操作已熟悉</td></tr>
+        <tr><td>03/02</td><td>基础建模：切角柜体</td><td><span class="tag excellent">优秀</span></td><td>100</td><td>基础操作已熟悉</td></tr>
+        <tr><td>03/03</td><td>基础建模：厨房电器柜</td><td><span class="tag excellent">优秀</span></td><td>90</td><td>建模步骤已熟悉</td></tr>
+        <tr><td>03/04</td><td>基础建模：柜门</td><td><span class="tag excellent">优秀</span></td><td>90</td><td>快捷调整已掌握</td></tr>
         <tr><td>03/04</td><td>系列产品：衣帽间</td><td><span class="tag normal">一般</span></td><td>70</td><td>细节参数需注意</td></tr>
         <tr><td>03/05</td><td>🔄 补交：衣帽间</td><td><span class="tag good">良好</span></td><td>—</td><td>参数已理解</td></tr>
         <tr><td>03/05</td><td>系列产品：LW书墙</td><td><span class="tag good">良好</span></td><td>80</td><td>特殊操作待熟练</td></tr>
@@ -445,8 +445,8 @@ body{
     </div>
     <div class="progress-row">
       <span class="progress-label">完成率</span>
-      <div class="progress-bar"><div class="progress-fill green" style="width:待填写"></div></div>
-      <span class="progress-val">待填写</span>
+      <div class="progress-bar"><div class="progress-fill green" style="width:100%"></div></div>
+      <span class="progress-val">100%</span>
     </div>
   </div>
 </div>
@@ -455,18 +455,18 @@ body{
 <div class="section">
   <div class="section-header">
     <h2 class="section-title">考试成绩</h2>
-    <p class="section-desc">待填写</p>
+    <p class="section-desc">待确认</p>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-icon orange">🎯</div>
-      <div><div class="card-title">考试结果</div><div class="card-subtitle">工艺+作业+软件 · 综合评价待评定</div></div>
+      <div><div class="card-title">考试结果</div><div class="card-subtitle">工艺+作业+软件 · 综合评价优秀</div></div>
     </div>
     <div class="stat-row">
       <div class="stat-item"><div class="stat-val">--</div><div class="stat-lbl">工艺理论</div></div>
       <div class="stat-item"><div class="stat-val">--</div><div class="stat-lbl">作业平均</div></div>
       <div class="stat-item"><div class="stat-val green">--</div><div class="stat-lbl">软件实操</div></div>
-      <div class="stat-item"><div class="stat-val">待评定</div><div class="stat-lbl">等级</div></div>
+      <div class="stat-item"><div class="stat-val">待确认</div><div class="stat-lbl">等级</div></div>
     </div>
   </div>
 </div>
@@ -475,20 +475,20 @@ body{
 <div class="section">
   <div class="section-header">
     <h2 class="section-title">综合评价</h2>
-    <p class="section-desc">待填写 · 2026.07.29反馈</p>
+    <p class="section-desc">待确认</p>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-icon purple">⭐</div>
-      <div><div class="card-title">讲师评语</div><div class="card-subtitle">综合评价待评定 · 推荐为种子学员</div></div>
+      <div><div class="card-title">讲师评语</div><div class="card-subtitle">综合评价优秀 · 推荐为种子学员</div></div>
     </div>
     <div class="comment-box info">
       <div class="cmt-title blue">优点</div>
-      待填写
+      待确认
     </div>
     <div class="comment-box warn" style="margin-top:10px">
       <div class="cmt-title red">改进建议</div>
-      待填写
+      待确认
     </div>
   </div>
 </div>
@@ -497,7 +497,7 @@ body{
 <div class="section">
   <div class="section-header">
     <h2 class="section-title">培训剪影</h2>
-    <p class="section-desc">待填写</p>
+    <p class="section-desc">待确认</p>
   </div>
   <div class="photo-wrapper">
   <div class="photo-section">
